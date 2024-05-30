@@ -1,6 +1,3 @@
-![](assets/header_image.png)
-
-[![Build Main](https://github.com/ika-rwth-aachen/acdc-notebooks/actions/workflows/build.yml/badge.svg)](https://github.com/ika-rwth-aachen/acdc-notebooks/actions/workflows/build.yml)
 
 
 # Automated and Connected Driving Challenges (ACDC)
@@ -33,12 +30,12 @@ All programming tasks can be run inside of a Docker container, which we provide.
 
 1. Clone this repository:
     ```bash
-    git clone https://github.com/ika-rwth-aachen/acdc-notebooks.git
+    git clone https://github.com/moa11/tp-va.git
     ```
 
 2. Pull our ACDC-Notebooks Docker image from our registry:
     ```bash
-    docker pull rwthika/acdc-notebooks:latest
+    docker pull mooaa/syfra-va:1
     ```
 
 3. In a terminal, navigate to the Docker directory of this repository and launch the ACDC-Notebooks Docker container with the provided run script:
