@@ -1,0 +1,84 @@
+{
+    "panels": {
+        "sidebar": {
+            "display": true,
+            "collapsed": false
+        },
+        "header": {
+            "display": true
+        },
+        "info": {
+            "display": true,
+            "collapsed": true
+        }
+    },
+    "ros": {
+        "endpoint": "ws://localhost:9090/ros/bridge",
+        "pkgsEndpoint": "ws://localhost:9090/ros/pkgs"
+    },
+    "infoTabs": [],
+    "visualizations": [
+        {
+            "vizType": "Image",
+            "topicName": "/carla/ego_vehicle/rgb_front/image",
+            "messageType": "sensor_msgs/Image",
+            "name": "Image",
+            "visible": true,
+            "key": "YpXq9IsLZ"
+        },
+        {
+            "vizType": "PointCloud",
+            "topicName": "/carla/ego_vehicle/lidar",
+            "messageType": "sensor_msgs/PointCloud2",
+            "name": "PointCloud",
+            "visible": true,
+            "key": "lfnjoV5hD",
+            "size": "0.4125"
+        },
+        {
+            "vizType": "Image",
+            "topicName": "/carla/ego_vehicle/semantic_segmentation_front/image",
+            "messageType": "sensor_msgs/Image",
+            "name": "Image",
+            "visible": true,
+            "key": "gyBpUD_xI"
+        },
+        {
+            "vizType": "Path",
+            "topicName": "/carla/ego_vehicle/waypoints",
+            "messageType": "nav_msgs/Path",
+            "name": "Path",
+            "visible": true,
+            "key": "8riFWpJgK"
+        }
+    ],
+    "globalOptions": {
+        "display": true,
+        "backgroundColor": {
+            "display": true,
+            "value": 15790320
+        },
+        "fixedFrame": {
+            "display": true,
+            "value": "ego_vehicle/lidar-tf-connector"
+        },
+        "grid": {
+            "display": true,
+            "size": 30,
+            "divisions": 30,
+            "color": 11184810,
+            "centerlineColor": 7368816
+        }
+    },
+    "tools": {
+        "mode": "controls",
+        "controls": {
+            "display": false,
+            "enabled": true
+        },
+        "measure": {
+            "display": false
+        },
+        "custom": []
+    }
+}

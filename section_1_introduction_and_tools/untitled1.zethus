@@ -1,0 +1,68 @@
+{
+    "panels": {
+        "sidebar": {
+            "display": true,
+            "collapsed": false
+        },
+        "header": {
+            "display": true
+        },
+        "info": {
+            "display": true,
+            "collapsed": true
+        }
+    },
+    "ros": {
+        "endpoint": "ws://localhost:9090/ros/bridge",
+        "pkgsEndpoint": "ws://localhost:9090/ros/pkgs"
+    },
+    "infoTabs": [],
+    "visualizations": [
+        {
+            "vizType": "Image",
+            "topicName": "/carla/ego_vehicle/rgb_front/image",
+            "messageType": "sensor_msgs/Image",
+            "name": "Image",
+            "visible": true,
+            "key": "FcN9JUe13"
+        },
+        {
+            "vizType": "PointCloud",
+            "topicName": "/carla/ego_vehicle/lidar",
+            "messageType": "sensor_msgs/PointCloud2",
+            "name": "PointCloud",
+            "visible": true,
+            "key": "bafuZEp5U",
+            "size": "0.5125"
+        }
+    ],
+    "globalOptions": {
+        "display": true,
+        "backgroundColor": {
+            "display": true,
+            "value": 15790320
+        },
+        "fixedFrame": {
+            "display": true,
+            "value": "ego_vehicle/lidar-tf-connector"
+        },
+        "grid": {
+            "display": true,
+            "size": 30,
+            "divisions": 30,
+            "color": 11184810,
+            "centerlineColor": 7368816
+        }
+    },
+    "tools": {
+        "mode": "controls",
+        "controls": {
+            "display": false,
+            "enabled": true
+        },
+        "measure": {
+            "display": false
+        },
+        "custom": []
+    }
+}

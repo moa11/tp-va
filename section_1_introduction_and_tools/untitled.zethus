@@ -1,0 +1,60 @@
+{
+    "panels": {
+        "sidebar": {
+            "display": true,
+            "collapsed": false
+        },
+        "header": {
+            "display": true
+        },
+        "info": {
+            "display": true,
+            "collapsed": true
+        }
+    },
+    "ros": {
+        "endpoint": "ws://localhost:9090/ros/bridge",
+        "pkgsEndpoint": "ws://localhost:9090/ros/pkgs"
+    },
+    "infoTabs": [],
+    "visualizations": [
+        {
+            "vizType": "PointCloud",
+            "topicName": "/carla/ego_vehicle/semantic_lidar",
+            "messageType": "sensor_msgs/PointCloud2",
+            "name": "PointCloud",
+            "visible": true,
+            "key": "tR97X5kKE",
+            "size": "0.5125"
+        }
+    ],
+    "globalOptions": {
+        "display": true,
+        "backgroundColor": {
+            "display": true,
+            "value": "#ffffff"
+        },
+        "fixedFrame": {
+            "display": true,
+            "value": "ego_vehicle/semantic_lidar-tf-connector"
+        },
+        "grid": {
+            "display": true,
+            "size": 30,
+            "divisions": 30,
+            "color": 11184810,
+            "centerlineColor": 7368816
+        }
+    },
+    "tools": {
+        "mode": "controls",
+        "controls": {
+            "display": false,
+            "enabled": true
+        },
+        "measure": {
+            "display": false
+        },
+        "custom": []
+    }
+}
