@@ -1,1 +1,1 @@
-FROM rwthika/acdc-notebooks:latest
+FROM mooaa/syfra-va:1
