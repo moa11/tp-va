@@ -37,10 +37,5 @@ All programming tasks can be run inside of a Docker container, which we provide.
 
 
 
-# License
-
-MIT License
-
-Copyright 2023 Institute for Automotive Engineering of RWTH Aachen University.
 # tp-va
 # tp-va
