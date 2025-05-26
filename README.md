@@ -2,7 +2,7 @@
 
 ## Quick Start
 
-All programming tasks can be run inside of a Docker container, which we provide. Our ACDC-Notebooks Docker container can be used for starting JupyterLab on you local machine. You can use the following instructions to run the container:
+All programming tasks can be run inside of a Docker container, which we provide. Our  Docker container can be used for starting JupyterLab on you local machine. You can use the following instructions to run the container:
 
 
 1. Clone this repository:
