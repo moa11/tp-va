@@ -12,7 +12,7 @@ All programming tasks can be run inside of a Docker container, which we provide.
 
 2. Pull our ese-Notebooks Docker image from our registry:
     ```bash
-    docker pull mooaa/syfra-va:1
+    docker pull mooaa/syfra-va:2
     ```
 
 3. In a terminal, navigate to the Docker directory of this repository and launch the ACDC-Notebooks Docker container with the provided run script:
