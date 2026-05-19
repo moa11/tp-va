@@ -38,6 +38,3 @@ ENV/
 # OS
 .DS_Store
 Thumbs.db
-
-# Section 2 — temporarily excluded, will be re-added later
-section_2_sensor_data_processing/
