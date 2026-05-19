@@ -10,7 +10,7 @@ All programming tasks can be run inside of a Docker container, which we provide.
     git clone https://github.com/moa11/tp-va.git
     ```
 
-2. Pull our ACDC-Notebooks Docker image from our registry:
+2. Pull our ese-Notebooks Docker image from our registry:
     ```bash
     docker pull mooaa/syfra-va:1
     ```
