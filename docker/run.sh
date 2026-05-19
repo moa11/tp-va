@@ -7,7 +7,7 @@ MOUNT_DIR="$(dirname "$DIR")"
 # This setting is predefined in registry.git.rwth-aachen.de/jupyter/profiles/rwth-courses:latest
 # to ensure compatibility with RWTH Jupyter Hub
 # We will give this user id temporarly write permissions to this directory
-setfacl -R -m u:1000:rwx $MOUNT_DIR
+setfacl -R -m u:1000:rwx $MOUNT_DIR 2>/dev/null || true
 #ika-acdc-notebooks
 docker run \
 --name='syfraava' \
@@ -16,9 +16,9 @@ docker run \
 --tty \
 --publish 8888:8888 \
 --publish 9090:9090 \
---volume $MOUNT_DIR:/home/ese/tp-va \
+--volume $MOUNT_DIR:/home/jovyan/tp-va \
 mooaa/syfra-va:2
 #rwthika/acdc-notebooks:latest
 
 # Remove write permission of user 1000
-setfacl -R -x u:1000 $MOUNT_DIR
+setfacl -R -x u:1000 $MOUNT_DIR 2>/dev/null || true
