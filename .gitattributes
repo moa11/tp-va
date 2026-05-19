@@ -1,0 +1,7 @@
+# Always store shell scripts with LF line endings.
+# Prevents bash "bad interpreter: ^M" errors when Windows commits run.sh.
+*.sh text eol=lf
+
+# Notebooks and JSON — keep LF as well
+*.ipynb text eol=lf
+*.json  text eol=lf
