@@ -179,7 +179,21 @@ RUN apt-get update && \
 # Register system Python 3.8 as a dedicated Jupyter kernel for ROS 2 notebooks.
 # Conda Python 3.9 cannot load rclpy C extensions (compiled for Python 3.8).
 RUN /usr/bin/python3 -m pip install ipykernel matplotlib && \
-    /usr/bin/python3 -m ipykernel install --name python38-ros2 --display-name "Python 3.8 (ROS 2 Foxy)"
+    /usr/bin/python3 -m ipykernel install --name python38-ros2 --display-name "Python 3.8 (ROS 2 Foxy)" && \
+    /usr/bin/python3 -c "\
+import json; \
+f='/usr/local/share/jupyter/kernels/python38-ros2/kernel.json'; \
+s=json.load(open(f)); \
+s['env']={ \
+  'LD_LIBRARY_PATH':'/opt/ros/foxy/lib', \
+  'PYTHONPATH':'/opt/ros/foxy/lib/python3.8/site-packages', \
+  'ROS_DISTRO':'foxy', \
+  'AMENT_PREFIX_PATH':'/opt/ros/foxy', \
+  'ROS_VERSION':'2', \
+  'ROS_PYTHON_VERSION':'3' \
+}; \
+json.dump(s,open(f,'w'),indent=2) \
+"
 
 USER jovyan
 
