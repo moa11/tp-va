@@ -157,6 +157,30 @@ RUN git clone https://github.com/fzi-forschungszentrum-informatik/Lanelet2 /lane
     catkin config --source-space /lanelet2 -DPYTHON_EXECUTABLE=/usr/bin/python3 && \
     catkin build
 
+# Install ROS 2 Foxy (compatible Ubuntu 20.04 Focal — same base as Noetic).
+# Also refreshes the ROS 1 key which expires and breaks apt-get update.
+RUN curl -sSL https://raw.githubusercontent.com/ros/rosdistro/master/ros.key \
+        | gpg --dearmor -o /usr/share/keyrings/ros-archive-keyring.gpg && \
+    echo "deb [arch=$(dpkg --print-architecture) signed-by=/usr/share/keyrings/ros-archive-keyring.gpg] http://packages.ros.org/ros/ubuntu focal main" \
+        | tee /etc/apt/sources.list.d/ros-latest.list > /dev/null && \
+    echo "deb [arch=$(dpkg --print-architecture) signed-by=/usr/share/keyrings/ros-archive-keyring.gpg] http://packages.ros.org/ros2/ubuntu focal main" \
+        | tee /etc/apt/sources.list.d/ros2.list > /dev/null
+
+RUN apt-get update && \
+    apt-get install -y --no-install-recommends \
+        ros-foxy-ros-base \
+        ros-foxy-std-msgs \
+        ros-foxy-geometry-msgs \
+        ros-foxy-sensor-msgs \
+        python3-colcon-common-extensions \
+        python3-pip \
+    && rm -rf /var/lib/apt/lists/*
+
+# Register system Python 3.8 as a dedicated Jupyter kernel for ROS 2 notebooks.
+# Conda Python 3.9 cannot load rclpy C extensions (compiled for Python 3.8).
+RUN /usr/bin/python3 -m pip install ipykernel && \
+    /usr/bin/python3 -m ipykernel install --name python38-ros2 --display-name "Python 3.8 (ROS 2 Foxy)"
+
 USER jovyan
 
 ARG TARGETPLATFORM

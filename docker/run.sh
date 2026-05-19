@@ -16,8 +16,8 @@ docker run \
 --tty \
 --publish 8888:8888 \
 --publish 9090:9090 \
---volume $MOUNT_DIR:/home/jovyan/va \
-mooaa/syfra-va:1
+--volume $MOUNT_DIR:/home/ese/tp-va \
+mooaa/syfra-va:2
 #rwthika/acdc-notebooks:latest
 
 # Remove write permission of user 1000
