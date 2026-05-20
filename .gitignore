@@ -38,3 +38,7 @@ ENV/
 # OS
 .DS_Store
 Thumbs.db
+
+# Solution notebooks — kept locally, not published to students
+*_solution.ipynb
+asset-v1_*
